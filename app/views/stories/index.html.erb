@@ -3,11 +3,11 @@
     <h1 class="text-center">Scarrrry StoryTyme</h1>
   </div>
   <div class="panel-body">
-    <h4>Active Stories:</h4>
-    <ul>
-      <% @stories.order(created_at: :desc).each do |story| %>
-      <li><%= link_to story.title, story_path(story) %></li>
-      <% end %>
-    </ul>
+    <h4 class="text-center">Active Stories</h4>
   </div>
+  <ul class="list-group">
+    <% @stories.order(created_at: :desc).each do |story| %>
+    <li class="list-group-item"><%= link_to story.title, story_path(story) %> (<%= story.additions.length %> contributions)</li>
+    <% end %>
+  </ul>
 </div>

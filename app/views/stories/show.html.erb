@@ -17,7 +17,7 @@
   </div>
   <ul class="list-group">
     <% @story.additions.each do |addition| %>
-      <li class="list-group-item"><%= image_tag("halloween/#{addition.image.name}.svg", size: "37") %> <h4 class="pull-right"><%= addition.body %> (from <%= addition.author %>)</h4></li>
+      <li class="list-group-item clearfix"><%= image_tag("halloween/#{addition.image.name}.svg", size: "37") %> <h4 class="pull-right clearfix" style="padding: -37px 0px 0px 66px"><%= addition.body %> (from <%= addition.author %>)</h4></li>
     <% end %>
   </ul>
 </div>

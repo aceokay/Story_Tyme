@@ -1,7 +1,7 @@
-<h1>StoryTyme</h1>
+<h1>Scarrrry StoryTyme</h1>
 
 <ul>
-  <% @stories.each do |story| %>
+  <% @stories.order(created_at: :desc).each do |story| %>
   <li><%= link_to story.title, story_path(story) %></li>
   <% end %>
 </ul>

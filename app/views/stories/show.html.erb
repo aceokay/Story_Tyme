@@ -1,0 +1,16 @@
+<h1><%= @story.title %></h1>
+
+<p>
+  <%= @story.body %>
+  <% @story.additions.each do |addition| %>
+    <%= addition.body %>
+  <% end %>
+</p>
+
+<p>
+  -<%= @story.creator %>
+</p>
+
+
+
+<%= link_to "Make an Addition", new_story_addition_path(@story) %>

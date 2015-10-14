@@ -1,16 +1,20 @@
-<h1>New Addition to <%= @story.title %></h1>
+<h1>New Addition to <b><%= @story.title %></b></h1>
 
-<%= image_tag("halloween/#{@image.name}.svg", size: "666") %>
+<p class="text-center"><%= image_tag("halloween/#{@image.name}.svg", size: "666") %></p>
 
 <p>
-  Using the image above, generate an addition to the story!
+  Using the image above as inspiration, generate an addition to the story!
 </p>
 
 <%= form_for [@story, @addition] do |f| %>
-  <%= f.label :body %>
-  <%= f.text_area :body %>
-  <%= f.label :author %>
-  <%= f.text_field :author %>
+  <div class="form-group">
+    <%= f.label "Make Your Addition (only one sentence!)" %>
+    <%= f.text_area :body, class: "form-control", placeholder: "Previous sentence: #{@placeholder}" %>
+  </div>
+  <div class="form-group">
+    <%= f.label "Your Name" %>
+    <%= f.text_field :author, class: "form-control" %>
+  </div>
   <%= f.hidden_field :image_id, :value => @image.id %>
-  <%= f.submit %>
+  <%= f.submit "Submit", class: "btn btn-default center-block" %>
 <% end %>

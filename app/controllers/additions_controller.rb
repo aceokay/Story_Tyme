@@ -7,6 +7,11 @@ class AdditionsController < ApplicationController
     image_count = images.length
     selected_id = 1 + rand(image_count).ceil
     @image = Image.find(selected_id)
+    if @story.additions.length > 1
+      @placeholder = @story.additions[-2].body
+    else
+      @placeholder = @story.body
+    end
   end
 
   def create

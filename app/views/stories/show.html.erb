@@ -1,18 +1,24 @@
-<h1><%= @story.title %><small> started by <%= @story.creator %></small></h1>
+<div class="jumbotron">
+  <h1><%= @story.title %><small> started by <%= @story.creator %></h1>
+  <p>
+    <%= @story.body %>
+    <% @story.additions.each do |addition| %>
+      <%= addition.body %>
+    <% end %>
+  </p>
+</div>
 
-<p>
-  <%= @story.body %>
-  <% @story.additions.each do |addition| %>
-    <%= addition.body %>
-  <% end %>
-</p>
-
-<p><%= link_to "Make an Addition", new_story_addition_path(@story) %></p>
-
-<h3>Story History:</h3>
-<ol>
-  <li><%= @story.body %> (from <%= @story.creator %>)</li>
-  <% @story.additions.each do |addition| %>
-    <li><%= image_tag("halloween/#{addition.image.name}.svg", size: "66") %> <%= addition.body %> (from <%= addition.author %>)</li>
-  <% end %>
-</ol>
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h3 class="panel-title">Story History:</h3>
+  </div>
+  <div class="panel-body">
+    <h4 class="text-center"><%= @story.body %> (from <%= @story.creator %>)</h4>
+  </div>
+  <ul class="list-group">
+    <% @story.additions.each do |addition| %>
+      <li class="list-group-item"><%= image_tag("halloween/#{addition.image.name}.svg", size: "37") %> <h4 class="pull-right"><%= addition.body %> (from <%= addition.author %>)</h4></li>
+    <% end %>
+  </ul>
+</div>
+<h3 class="pull-right"><%= link_to "Add to this story!", new_story_addition_path(@story) %></h3>

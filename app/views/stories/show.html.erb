@@ -1,4 +1,4 @@
-<h1><%= @story.title %></h1>
+<h1><%= @story.title %><small> started by <%= @story.creator %></small></h1>
 
 <p>
   <%= @story.body %>
@@ -7,10 +7,13 @@
   <% end %>
 </p>
 
-<p>
-  -<%= @story.creator %>
-</p>
+<p><%= link_to "Make an Addition", new_story_addition_path(@story) %></p>
+<p><%= link_to "Home", stories_path %></p>
 
-
-
-<%= link_to "Make an Addition", new_story_addition_path(@story) %>
+<h3>Story History:</h3>
+<ol>
+  <li><%= @story.body %> (from <%= @story.creator %>)</li>
+  <% @story.additions.each do |addition| %>
+    <li><%= image_tag("halloween/#{addition.image.name}.svg", size: "66") %> <%= addition.body %> (from <%= addition.author %>)</li>
+  <% end %>
+</ol>

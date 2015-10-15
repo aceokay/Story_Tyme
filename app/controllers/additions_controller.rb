@@ -40,6 +40,13 @@ class AdditionsController < ApplicationController
     end
   end
 
+  def destroy
+    @story = Story.find(params[:story_id])
+    @addition = Addition.find(params[:id])
+    @addition.destroy
+    redirect_to story_path(@story)
+  end
+
   private
   def addition_params
     params.require(:addition).permit(:body, :author, :image_id)

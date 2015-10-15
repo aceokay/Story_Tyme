@@ -1,16 +1,18 @@
 <h1>New Story</h1>
 
+<%= render "layouts/errors", :object => @story %>
+
 <%= form_for @story do |f| %>
   <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label "Starter sentence for your story" %>
+    <%= f.label :body, "Starter sentence for your story" %>
     <%= f.text_area :body, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label "Your Name" %>
+    <%= f.label :creator, "Your Name" %>
     <%= f.text_field :creator, class: "form-control" %>
   </div>
   <%= f.submit "Submit", class: "btn btn-default center-block" %>

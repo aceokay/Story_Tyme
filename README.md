@@ -11,15 +11,15 @@ _Goals for future updates_
 * _Mass deployment._
 
 ###Setup
-1. Clone the repo by typing 'git clone https://github.com/azeazas/storytime.git' into the terminal.
-2. To bundle the gems, type 'bundle' into the terminal.
-3. To launch Postgres, type 'postgres' into the terminal.
-4. To create the database, type 'rake db:create' into the terminal.
-5. To create the tables in the database, type 'rake db:migrate' into the terminal.
-6. To seed the images table in the database, type 'rake db:seed' into the terminal.
-7. To create the test database, type 'rake db:test:prepare' into the terminal.
-8. To seed the test database, type 'rake db:seed RAILS_ENV=test --trace' into the terminal.
-9. Launch server by typing 'rails s' into the terminal and going to 'localhost:3000' in your browser.
+1. Clone the repo by typing `git clone https://github.com/azeazas/storytime.git` into the terminal.
+2. To bundle the gems, type `bundle` into the terminal.
+3. To launch Postgres, type `postgres` into the terminal.
+4. To create the database, type `rake db:create` into the terminal.
+5. To create the tables in the database, type `rake db:migrate` into the terminal.
+6. To seed the images table in the database, type `rake db:seed` into the terminal.
+7. To create the test database, type `rake db:test:prepare` into the terminal.
+8. To seed the test database, type `rake db:seed RAILS_ENV=test --trace` into the terminal.
+9. Launch server by typing `rails s` into the terminal and going to `localhost:3000` in your browser.
 10. You can now begin creating your scary stories!
 
 ###Technologies Used

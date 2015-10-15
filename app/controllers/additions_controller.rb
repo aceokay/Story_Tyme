@@ -25,6 +25,21 @@ class AdditionsController < ApplicationController
     end
   end
 
+  def edit
+    @addition = Addition.find(params[:id])
+    render :edit
+  end
+
+  def update
+    @addition = Addition.find(params[:id])
+    @story = Story.find(@addition.story_id)
+    if @addition.update(addition_params)
+      redirect_to story_path(@addition.story)
+    else
+      render :edit
+    end
+  end
+
   private
   def addition_params
     params.require(:addition).permit(:body, :author, :image_id)

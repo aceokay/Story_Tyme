@@ -11,7 +11,7 @@ _Goals for future updates_
 * _Mass deployment._
 
 ###Setup
-1. Clone the repo by typing `git clone https://github.com/azeazas/storytime.git` into the terminal.
+1. Clone the repo by typing `git clone https://github.com/aceokay/Story_Tyme` into the terminal.
 2. To bundle the gems, type `bundle` into the terminal.
 3. To launch Postgres, type `postgres` into the terminal.
 4. To create the database, type `rake db:create` into the terminal.

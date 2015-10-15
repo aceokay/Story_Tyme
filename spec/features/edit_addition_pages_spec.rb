@@ -5,7 +5,7 @@ describe "the edit an addition process" do
     visit stories_path
     click_on "Add a New Story"
     fill_in 'Title', :with => "Deez Nuts"
-    fill_in 'Starter sentence for your story', :with => "There was a man with nuts."
+    fill_in 'Starter sentence for your story', :with => "There was a man with peanuts."
     fill_in 'Your Name', :with => "Dee"
     click_on 'Submit'
     click_on "Deez Nuts"

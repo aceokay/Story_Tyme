@@ -11,7 +11,7 @@
                                                                                               :method => "delete"} %></p>
 </div>
 
-<div class="panel panel-danger">
+<div class="panel panel-warning">
   <div class="panel-heading">
     <h3 class="panel-title">Story History:</h3>
   </div>
@@ -29,4 +29,4 @@
     <% end %>
   </ul>
 </div>
-<h3 class="pull-right"><%= link_to "Add to this story!", new_story_addition_path(@story) %></h3>
+<button class="btn btn-danger btn-lg pull-right"><%= link_to "Add to this story!", new_story_addition_path(@story), {:style=>'color:white;'}%></button>

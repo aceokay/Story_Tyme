@@ -1,0 +1,33 @@
+Is the Github documentation - commits and README - thorough and descriptive?
+Phenomenal A+
+
+Is there good spec coverage?
+Phenomenal number of specs!
+
+Do all specs pass?
+4 integration specs are failing.
+
+Is the application logic clear and easy to navigate?
+Yes!
+
+
+Is the site user-friendly?
+Spooky-nomenal!!
+
+
+Are there opportunities for refactoring?
+The random number generator could be refactored.
+
+
+What features stand out?
+Showing the previous sentence in the submit form is a smart idea!! And showing the thumbnail on the submission is a nice touch.
+
+
+What features could be improved?
+Nothing it's phenomenal!!
+
+
+Do you have any additional constructive criticism or positive feedback to share?
+Really user-friendly, totally nailed the user stories how spooky.
+
+Maybe include trigger warning for people afraid of bats.
